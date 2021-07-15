@@ -1,0 +1,24 @@
+.jumbotron {
+  padding-top: 7rem !important;
+  background-color: #c3aed6;
+}
+
+#gallery {
+  background-color: #c3aed6 !important;
+}
+#gallery .col-lg > h3 {
+  color: white !important;
+}
+
+.fixed-top {
+  transition: all 1s !important;
+  opacity: 0.8;
+}
+.card {
+  color: white;
+  background-color: #8675a9;
+  border: 3px solid white;
+}
+section {
+  padding-top: 4rem !important;
+}
