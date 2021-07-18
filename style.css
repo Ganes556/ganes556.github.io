@@ -6,7 +6,7 @@
 #gallery {
   background-color: #c3aed6 !important;
 }
-#gallery .col-lg > h2 {
+#gallery .col-12 > h2 {
   color: white !important;
 }
 
@@ -28,7 +28,7 @@ section {
   border-radius: 5px;
 }
 .btn.btn-primary {
-  background-color: #8675a9;
+  background-color: #8675a9 !important;
   border: none;
 }
 .btn.btn-primary:focus {
