@@ -1,16 +1,14 @@
-const navbarToggler = document.querySelector("button.navbar-toggler");
-const spanToggler = document.querySelector(".animation-x");
-navbarToggler.addEventListener("click", () => {
-  spanToggler.classList.toggle("open");
+$("button.navbar-toggler").on("click", () => {
+  $(".animation-x").toggleClass("open");
 });
 
-// link_click and add the active class
-// const link_menu = document.querySelectorAll(".nav-link");
-// link_menu.forEach((e) => {
-//   e.addEventListener("click", () => {
-//     link_menu.forEach((d) => {
-//       d.classList.remove("active");
-//     });
-//     e.classList.add("active");
-//   });
-// });
+// type string
+if ($("#typed-slider").length == 1) {
+  let typed = new Typed("#typed-slider", {
+    stringsElement: "#typed-strings",
+    typeSpeed: 80,
+    backDelay: 3000,
+    backSpeed: 20,
+    loop: true,
+  });
+}

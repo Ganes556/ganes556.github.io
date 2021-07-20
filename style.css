@@ -10,9 +10,6 @@
   color: white !important;
 }
 
-/* .fixed-top {
-  transition: all 1s !important;
-} */
 .card {
   color: white;
   background-color: #8675a9;
@@ -84,4 +81,8 @@ section {
 }
 .form-control:focus {
   box-shadow: 0px 0px 0px 3px rgba(195, 174, 214, 1);
+}
+
+.typed-cursor {
+  font-size: 1.25rem;
 }
