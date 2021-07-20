@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- CSS custom-->
     <link rel="stylesheet" href="style.css" />
+    <!-- CDN aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <title>My CV | Ganes Satsangga</title>
   </head>
   <body>
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #8675a9">
       <div class="container">
-        <a class="navbar-brand" href="#">Ganes Satsangga</a>
+        <a class="navbar-brand text-uppercase" style="letter-spacing: 3px" href="#">Ganes Satsangga</a>
         <button class="navbar-toggler" onclick="open_animation()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <div class="animation-x d-flex flex-column gap-1">
             <span></span>
@@ -47,8 +57,8 @@
 
     <section class="jumbotron text-center text-white">
       <img class="rounded-circle img-thumbnail" src="./img/img.PNG" alt="Ganes Satsangga" srcset="" style="width: 200px" />
-      <h1 class="display-4">Ganes Satsangga</h1>
-      <p class="lead">Collage Student in ITB Stikom Bali</p>
+      <h1 class="display-4" style="font-family: 'Montserrat', sans-serif">Ganes Satsangga</h1>
+      <p class="lead">College Student in ITB Stikom Bali</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -69,18 +79,18 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-lg-7 col-10">
-            <p>Hey, My name is I GUSTI AGUNG GANES SATSANGGA DIPA, you can call me Ganes and I'm 20 years old. I'm is collage student in ITB STIKOM BALI, My NIM is 200030794.</p>
+            <p>Hey, My name is I GUSTI AGUNG GANES SATSANGGA DIPA, you can call me Ganes and I'm 20 years old. I'm is college student in ITB STIKOM BALI, My NIM is 200030794.</p>
             <p>SKILLS</p>
           </div>
         </div>
-
+        <!-- python -->
         <div class="row justify-content-center ps-2">
           <div class="col-lg-1 col-md-2 col-3">
             <h5>Python</h5>
           </div>
           <div class="col-lg-5 ms-lg-1 ms-lg-3 mt-lg-2 col-6">
             <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success" data-aos="zoom-in-right" data-aos-delay="100" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
@@ -91,7 +101,7 @@
           </div>
           <div class="col-lg-5 ms-lg-3 mt-lg-2 col-6">
             <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success" data-aos="zoom-in-right" data-aos-delay="100" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
@@ -102,7 +112,7 @@
           </div>
           <div class="col-lg-5 ms-lg-3 mt-lg-2 col-6">
             <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success" data-aos="zoom-in-right" data-aos-delay="100" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
@@ -122,14 +132,14 @@
     <section id="gallery">
       <div class="container">
         <div class="row text-center mb-3">
-          <div class="col-12">
+          <div class="col-12 pb-5">
             <h2>Gallery</h2>
           </div>
         </div>
-        <div class="row justify-content-center g-5">
+        <div class="row justify-content-center g-2 text-center">
           <div class="col-md-4">
             <div class="card">
-              <img src="./img/1.jpg" class="card-img-top" alt="Gallery 1" />
+              <img src="./img/1.jpg" class="card-img-top" data-aos="fade-up" data-aos-delay="100" data alt="Gallery 1" />
               <div class="card-body">
                 <p class="card-text">Computer 1</p>
               </div>
@@ -137,7 +147,7 @@
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img src="./img/1.jpg" class="card-img-top" alt="Gallery 2" />
+              <img src="./img/2.jpg" class="card-img-top" data-aos="fade-up" data-aos-delay="100" alt="Gallery 2" />
               <div class="card-body">
                 <p class="card-text">Computer 2</p>
               </div>
@@ -145,7 +155,7 @@
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img src="./img/2.jpg" class="card-img-top" alt="Gallery 3" />
+              <img src="./img/3.jpg" class="card-img-top" data-aos="fade-up" data-aos-delay="100" alt="Gallery 3" />
               <div class="card-body">
                 <p class="card-text">Computer 3</p>
               </div>
@@ -153,7 +163,7 @@
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img src="./img/3.jpg" class="card-img-top" alt="Gallery 4" />
+              <img src="./img/4.jpg" class="card-img-top" data-aos="fade-up" data-aos-delay="100" alt="Gallery 4" />
               <div class="card-body">
                 <p class="card-text">Computer 4</p>
               </div>
@@ -162,7 +172,7 @@
 
           <div class="col-md-4">
             <div class="card">
-              <img src="./img/5.jpg" class="card-img-top" alt="Gallery 5" />
+              <img src="./img/5.jpg" class="card-img-top" data-aos="fade-up" data-aos-delay="100" alt="Gallery 5" />
               <div class="card-body">
                 <p class="card-text">Computer 5</p>
               </div>
@@ -224,7 +234,13 @@
       <p>Create with <i class="bi bi-heart-fill text-danger"></i> by <a href="instagram.com/slashrootctf/" class="fw-bold text-white text-decoration-none">Ganes Satsangga</a></p>
     </footer>
     <!-- footer end -->
+
     <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- import aos library for set the scroll animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
