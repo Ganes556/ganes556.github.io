@@ -17,16 +17,14 @@
     <!-- CDN aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <title>My CV | Ganes Satsangga</title>
   </head>
-  <body>
+  <body class="position-relative" data-bs-spy="scroll" data-bs-target="#navbarNav">
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #8675a9">
       <div class="container">
         <a class="navbar-brand text-uppercase" style="letter-spacing: 3px" href="#">Ganes Satsangga</a>
-        <button class="navbar-toggler" onclick="open_animation()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <div class="animation-x d-flex flex-column gap-1">
             <span></span>
             <span></span>
@@ -36,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about-me">About me</a>
@@ -55,7 +53,7 @@
 
     <!-- jumbotron start -->
 
-    <section class="jumbotron text-center text-white">
+    <section class="jumbotron text-center text-white" id="home">
       <img class="rounded-circle img-thumbnail" src="./img/img.PNG" alt="Ganes Satsangga" srcset="" style="width: 200px" />
       <h1 class="display-4" style="font-family: 'Montserrat', sans-serif">Ganes Satsangga</h1>
       <p class="lead">College Student in ITB Stikom Bali</p>
@@ -235,8 +233,8 @@
     </footer>
     <!-- footer end -->
 
-    <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
     <!-- import aos library for set the scroll animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

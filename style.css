@@ -10,10 +10,9 @@
   color: white !important;
 }
 
-.fixed-top {
+/* .fixed-top {
   transition: all 1s !important;
-  opacity: 0.8;
-}
+} */
 .card {
   color: white;
   background-color: #8675a9;
