@@ -7,7 +7,7 @@ if ($("#typed-slider").length == 1) {
   let typed = new Typed("#typed-slider", {
     stringsElement: "#typed-strings",
     typeSpeed: 80,
-    backDelay: 3000,
+    backDelay: 2000,
     backSpeed: 20,
     loop: true,
   });
