@@ -13,6 +13,7 @@ if ($("#typed-slider").length == 1) {
     loop: true,
   });
 }
+
 // var scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance(scrollSpyContentEl);
 // $(document).ready(() => {
 //   $("body").each(function () {
@@ -21,3 +22,4 @@ if ($("#typed-slider").length == 1) {
 //     });
 //   });
 // });
+
