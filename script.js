@@ -9,6 +9,7 @@ if ($("#typed-slider").length == 1) {
     typeSpeed: 80,
     backDelay: 2000,
     backSpeed: 20,
+    startDelay: 2200,
     loop: true,
   });
 }
