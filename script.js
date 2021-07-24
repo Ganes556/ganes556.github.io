@@ -19,12 +19,12 @@ $(document).ready(function () {
   let link_selector = ".nav-link";
   let link_page = "section";
   $(link_selector).removeClass("active");
-  // if (location.hash === "") {
-  //   $("a[href='#home']").addClass("active");
-  // } else {
-  // }
-  location.hash = localStorage["current-link"];
-  $("a[href='" + location.hash + "']").addClass("active");
+  if (location.hash !== "") {
+    location.hash = localStorage["current-link"];
+    $("a[href='" + location.hash + "']").addClass("active");
+  } else {
+    $("a[href='#home']").addClass("active");
+  }
 
   $(window).scroll(function () {
     let top = $(window).scrollTop();
