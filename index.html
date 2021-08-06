@@ -17,33 +17,69 @@
         width: 100%;
         height: 100vh;
         display: flex;
-        background: linear-gradient(to right, #19e9b4 27.5%, white 27.5%);
+        background: linear-gradient(to right, #19e9b4 40%, white 40%);
       }
       .cards {
-        width: 90%;
+        width: 70%;
         height: 80%;
         margin: auto;
         box-shadow: 0px 0px 50px grey;
         display: grid;
+        z-index: 2;
         align-items: center;
+      }
+      svg {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        z-index: 3;
+      }
+      .floating-form {
+        height: 20px !important;
+      }
+      @media (max-width: 500px) {
+        .containers {
+          background: white;
+        }
+        .cards {
+          width: 90%;
+          box-shadow: 0px 0px 10px grey;
+        }
       }
     </style>
   </head>
   <body>
     <div class="containers">
+      <!-- <span></span> -->
+
       <div class="cards container-fluid">
         <div class="row" style="height: 100%">
-          <div class="col-12 text-end">
-            <p class="fs-5">HELLO</p>
-          </div>
-          <div class="col-3 p-2">
+          <div class="col-4 align-items-center d-grid">
             <div class="brand text-center justify-content-center">
-              <img width="100px" src="/example design.png" alt="Perushaan SUSU" />
+              <img width="100px" src="/example design.png" alt="Perusahaan SUSU" />
               <h1>Brand Name</h1>
               <h5>Content About brand</h5>
             </div>
           </div>
-          <div class="col"></div>
+          <div class="col d-flex flex-column">
+            <div class="row text-end">
+              <a href="#" class="nav-link text-warning">Need Help?</a>
+            </div>
+            <div class="row my-auto">
+              <form action="" class="container d-grid gap-3 col-10">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="email" />
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="password" />
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <button class="btn btn-success">Login</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
