@@ -62,26 +62,41 @@
       .form-control:focus {
         box-shadow: 0 0 5px var(--border-color);
       }
-      .form-control::placeholder {
+      .form-control::placeholder,
+      label {
         color: var(--placeholder-color);
-        font-weight: 500;
+        font-weight: 500 !important;
       }
     </style>
   </head>
   <body>
+    <?php
+      $user = $_GET['username'];
+      $pass = $_GET['password'];
+      if($user === "gustiganes" && $pass === "12345"){
+        session_start();
+        
+      }
+    ?>
     <div class="container-fluid d-flex overflow-hidden" style="height: 100vh">
       <div class="container m-auto">
         <div class="content-login">
           <p class="login-text">Login.</p>
-          <form action="" class="row gap-3 d-grid justify-content-center">
+          <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?></form>" class="row gap-3 d-grid justify-content-center">
             <div class="col-12 d-flex justify-content-center">
               <img width="200px" src="./img/logo.png" alt="" srcset="" />
             </div>
             <div class="col-12">
-              <input type="text" class="form-control" placeholder="Username" />
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingUsernameInput" placeholder="Username" name="username" />
+                <label for="floatingUsernameInput">Username</label>
+              </div>
             </div>
             <div class="col-12">
-              <input type="Password" class="form-control" placeholder="Password" />
+              <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPasswordInput" placeholder="Password" name="password"/>
+                <label for="floatingPasswordInput">Password</label>
+              </div>
             </div>
             <div class="col-12 mt-3">
               <button class="btn text-white">SIGN IN</button>
