@@ -10,38 +10,25 @@
     <title>Login</title>
     <style>
       :root {
-        --border-box-color: #d7d7d7;
-        --background-color: #b1b1b1;
+        --border-color: #d7d7d7;
+        --placeholder-color: #9c9c9c;
       }
       * {
         font-family: "Montserrat", sans-serif !important;
         font-weight: 700 !important;
       }
       .container-fluid {
-        background-image: url("img/background3.png");
+        background-image: url("img/background.png");
         background-size: cover;
-        background-color: var(--background-color);
       }
 
       .container {
         width: 400px;
         height: 600px;
         position: relative;
-        border: 1px solid var(--border-box-color);
+        border: 1px solid var(--border-color);
         border-radius: 40px;
-      }
-      .background {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        background: url("./img/Rectangle2.png") !important;
-        box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-        mix-blend-mode: darken;
-        border-radius: 40px;
-        z-index: 1;
+        background-color: white;
       }
       .content-login {
         z-index: 2;
@@ -49,7 +36,6 @@
       }
       .login-text {
         text-align: center;
-        color: white;
         margin: 20px;
         font-size: 30px;
         text-transform: uppercase;
@@ -61,16 +47,12 @@
         height: 56px;
       }
       .btn:focus {
-        box-shadow: 0 0 10px var(--border-box-color);
+        box-shadow: 0 0 10px var(--border-color);
       }
       .form-control,
       .form-control:focus {
-        background-image: url("./img/background3.png");
-        background-position: center;
-        background-color: var(--background-color);
-        mix-blend-mode: darken;
-        border: 5px solid var(--border-box-color);
-        color: white;
+        border: 5px solid var(--border-color);
+        color: gray;
       }
       .form-control {
         width: 300px !important;
@@ -78,10 +60,10 @@
         border-radius: 15px !important;
       }
       .form-control:focus {
-        box-shadow: 0 0 5px var(--border-box-color);
+        box-shadow: 0 0 5px var(--border-color);
       }
       .form-control::placeholder {
-        color: white;
+        color: var(--placeholder-color);
         font-weight: 500;
       }
     </style>
@@ -91,23 +73,21 @@
       <div class="container m-auto">
         <div class="content-login">
           <p class="login-text">Login.</p>
-          <form action="" class="row gap-3">
+          <form action="" class="row gap-3 d-grid justify-content-center">
             <div class="col-12 d-flex justify-content-center">
               <img width="200px" src="./img/logo.png" alt="" srcset="" />
             </div>
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12">
               <input type="text" class="form-control" placeholder="Username" />
             </div>
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12">
               <input type="Password" class="form-control" placeholder="Password" />
             </div>
-            <div class="col-12 d-flex justify-content-center mt-3">
+            <div class="col-12 mt-3">
               <button class="btn text-white">SIGN IN</button>
             </div>
           </form>
         </div>
-
-        <div class="background"></div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
