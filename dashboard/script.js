@@ -1,3 +1,6 @@
+if (sessionStorage.getItem("user") !== "GanesSatsangga" && sessionStorage.getItem("pass") !== "123456") {
+  window.location.replace("/");
+}
 $("button.navbar-toggler").on("click", () => {
   $(".animation-x").toggleClass("open");
 });
@@ -16,8 +19,15 @@ if ($("#typed-slider").length == 1) {
 
 // manual scrollspy
 $(document).ready(function () {
-  let link_selector = ".nav-link";
-  let link_page = "section";
+  const link_selector = ".nav-link";
+  const link_page = "section";
+  const log_out = ".log-out a";
+  $(log_out).click(function (e) {
+    e.preventDefault();
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.replace("/");
+  });
   $(link_selector).removeClass("active");
   if (location.hash === "" || location.hash === "#undefined") {
     $("a[href='#home']").addClass("active");

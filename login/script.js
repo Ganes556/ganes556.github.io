@@ -1,11 +1,17 @@
 let login = {
   name: "GanesSatsangga",
-  password: "GanesSatsangga",
+  password: "123456",
 };
+
 $(document).ready(function () {
   $(".btn").click(function (e) {
     e.preventDefault();
-    console.log(login);
-    // $("#floatingUsernameInput").val();
+    if ($("#floatingUsernameInput").val() === login.name && $("#floatingPasswordInput").val() === login.password) {
+      location.replace("/dashboard");
+      sessionStorage.setItem("user", $("#floatingUsernameInput").val());
+      sessionStorage.setItem("pass", $("#floatingPasswordInput").val());
+    } else {
+      $(".form-control").addClass("is-invalid");
+    }
   });
 });
