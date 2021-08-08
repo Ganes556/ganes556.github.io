@@ -1,0 +1,58 @@
+:root {
+  --border-color: #d7d7d7;
+  --placeholder-color: #9c9c9c;
+}
+* {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+}
+.container-fluid {
+  background-image: url("img/background.png");
+  background-size: cover;
+}
+
+.container {
+  width: 400px;
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: 0 0 20px var(--placeholder-color);
+}
+.content-login {
+  z-index: 2;
+  position: relative;
+}
+.login-text {
+  text-align: center;
+  margin: 20px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.btn {
+  background: linear-gradient(95.26deg, #9d50bb 2.75%, #6935ba 120.79%);
+  border-radius: 15px;
+  width: 300px;
+  height: 56px;
+}
+.btn:focus {
+  box-shadow: 0 5px 10px var(--border-color);
+}
+.form-control,
+.form-control:focus {
+  border: 5px solid var(--border-color);
+  color: gray;
+}
+.form-control {
+  width: 300px !important;
+  height: 56px;
+  border-radius: 15px !important;
+}
+.form-control:focus {
+  box-shadow: 0 0 5px var(--border-color);
+}
+.form-control::placeholder,
+label {
+  color: var(--placeholder-color);
+  font-weight: 500 !important;
+}
