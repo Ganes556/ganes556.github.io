@@ -1,10 +1,55 @@
+:root {
+  --primary-color: #8675a9;
+  --secondary-color: #c3aed6;
+}
+
+/* popup logout */
+.modal-header {
+  background-color: var(--primary-color) !important;
+  color: white;
+}
+
+.btn-exit {
+  border: none !important;
+  background: none !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+  opacity: 0.8;
+}
+.btn-exit:hover {
+  opacity: 1;
+}
+.btn.yes {
+  background-color: rgb(165, 57, 57);
+  color: white;
+}
+.btn.no {
+  background-color: rgb(75, 122, 75);
+  color: white;
+}
+
+.btn.yes:hover,
+.btn.yes:focus {
+  box-shadow: 0 0 0 3px rgba(165, 57, 57, 0.8);
+}
+.btn.no:hover,
+.btn.no:focus {
+  box-shadow: 0 0 0 3px rgba(75, 122, 75, 0.8);
+}
+
+/* end popup logout */
+
+.log-out a:hover {
+  color: var(--bs-danger) !important;
+}
 .jumbotron {
   padding-top: 5rem !important;
-  background-color: #c3aed6;
+  background-color: var(--secondary-color);
 }
 
 #gallery {
-  background-color: #c3aed6 !important;
+  background-color: var(--secondary-color) !important;
 }
 #gallery .col-12 > h2 {
   color: white !important;
@@ -12,7 +57,7 @@
 
 .card {
   color: white;
-  background-color: #8675a9;
+  background-color: var(--primary-color);
   border: 3px solid white;
 }
 section {
@@ -20,15 +65,15 @@ section {
 }
 
 .progress-bar {
-  background-color: #8675a9 !important;
+  background-color: var(--primary-color) !important;
   border-radius: 5px;
 }
 .btn.btn-primary {
-  background-color: #8675a9 !important;
+  background-color: var(--primary-color) !important;
   border: none;
 }
 .btn.btn-primary:focus {
-  box-shadow: 0 0 0 3px #c3aed6;
+  box-shadow: 0 0 0 3px var(--secondary-color);
 }
 
 /* hambuger menu animation */
@@ -48,7 +93,7 @@ section {
   display: block;
   width: 30px;
   height: 3px;
-  background-color: #c3aed6;
+  background-color: var(--secondary-color);
   transition: all 0.5s;
 }
 .animation-x.open span:nth-child(1) {

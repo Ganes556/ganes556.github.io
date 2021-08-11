@@ -1,10 +1,3 @@
-if (sessionStorage.getItem("user") !== "GanesSatsangga" && sessionStorage.getItem("pass") !== "123456") {
-  window.location.replace("/");
-}
-$("button.navbar-toggler").on("click", () => {
-  $(".animation-x").toggleClass("open");
-});
-
 // type string
 if ($("#typed-slider").length == 1) {
   let typed = new Typed("#typed-slider", {
@@ -16,21 +9,53 @@ if ($("#typed-slider").length == 1) {
     loop: true,
   });
 }
+// end type string
 
-// manual scrollspy
+// log out popup
+$(".modal-footer .yes").click(function (e) {
+  e.preventDefault();
+  $.ajax({
+    type: "POST",
+    url: "logout.php",
+    data: { logout: true },
+    success: function (e) {
+      if (e) {
+        // window.location.replace("/uas-login-php");
+        location.reload();
+      }
+    },
+  });
+});
+// end log out popup
+// form for contact me
+$(".form-contact").on("submit", (e) => {
+  e.preventDefault();
+  $.ajax({
+    type: "POST",
+    url: "send-contact.php",
+    data: $(".form-contact").serialize(),
+    success: function (response) {
+      if (response) {
+      }
+    },
+  });
+});
+// end form for contact me
+
 $(document).ready(function () {
+  // navbar hamburger menu in android
+  $("button.navbar-toggler").on("click", () => {
+    $(".animation-x").toggleClass("open");
+  });
+  // end navbar hamburger menu in android
+  // manual scrollspy
   const link_selector = ".nav-link";
   const link_page = "section";
-  const log_out = ".log-out a";
-  $(log_out).click(function (e) {
-    e.preventDefault();
-    localStorage.clear();
-    sessionStorage.clear();
-    window.location.replace("/");
-  });
+
   $(link_selector).removeClass("active");
-  if (location.hash === "" || location.hash === "#undefined") {
+  if (location.hash === "" || location.hash === "#undefined" || location.hash === "#home") {
     $("a[href='#home']").addClass("active");
+    window.scrollTo(0, 0);
   } else {
     location.hash = localStorage["current-link"];
     $("a[href='" + location.hash + "']").addClass("active");
@@ -53,4 +78,5 @@ $(document).ready(function () {
       }
     });
   });
+  // end manual scrollspy
 });
