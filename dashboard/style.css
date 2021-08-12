@@ -1,6 +1,10 @@
 :root {
   --primary-color: #8675a9;
   --secondary-color: #c3aed6;
+  --btn-yes: rgb(165, 57, 57);
+  --btn-yes-hover: rgba(165, 57, 57, 0.8);
+  --btn-no: rgb(75, 122, 75);
+  --btn-no-hover: rgba(75, 122, 75, 0.8);
 }
 
 /* popup logout */
@@ -21,21 +25,21 @@
   opacity: 1;
 }
 .btn.yes {
-  background-color: rgb(165, 57, 57);
+  background-color: var(--btn-yes);
   color: white;
 }
 .btn.no {
-  background-color: rgb(75, 122, 75);
+  background-color: var(--btn-no);
   color: white;
 }
 
 .btn.yes:hover,
 .btn.yes:focus {
-  box-shadow: 0 0 0 3px rgba(165, 57, 57, 0.8);
+  box-shadow: 0 0 0 3px var(--btn-yes-hover);
 }
 .btn.no:hover,
 .btn.no:focus {
-  box-shadow: 0 0 0 3px rgba(75, 122, 75, 0.8);
+  box-shadow: 0 0 0 3px var(--btn-no-hover);
 }
 
 /* end popup logout */
@@ -124,13 +128,18 @@ section {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
+/* contact me  */
 .form-control:focus {
-  box-shadow: 0px 0px 0px 3px rgba(195, 174, 214, 1);
+  box-shadow: 0px 0px 0px 3px var(--secondary-color);
+  border: var(--primary-color);
 }
 
+/* typed js */
 .typed-cursor {
   font-size: 1.25rem;
 }
+
+/* progressbar */
 .progress-bar:nth-child(1) {
   transition: all 0.5s;
 }

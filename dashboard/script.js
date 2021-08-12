@@ -12,6 +12,19 @@ if ($("#typed-slider").length == 1) {
 // end type string
 
 // log out popup
+$('a[data-bs-toggle="modal"]').click((e) => {
+  // show modal
+  $("#check").modal("show");
+  // title
+  $(".modal-title").html("Log Out");
+  // body
+  $(".modal-body").html("Do You Want to Log Out?");
+  $(".modal-body").css("color", "var(--btn-yes)");
+  // footer btn
+  $(".btn.no").html("No");
+  $(".btn.yes").removeClass("d-none");
+});
+
 $(".modal-footer .yes").click(function (e) {
   e.preventDefault();
   $.ajax({
@@ -20,13 +33,14 @@ $(".modal-footer .yes").click(function (e) {
     data: { logout: true },
     success: function (e) {
       if (e) {
-        // window.location.replace("/uas-login-php");
-        location.reload();
+        window.location.replace("/uas-login-php");
+        // location.reload();
       }
     },
   });
 });
 // end log out popup
+
 // form for contact me
 $(".form-contact").on("submit", (e) => {
   e.preventDefault();
@@ -36,7 +50,17 @@ $(".form-contact").on("submit", (e) => {
     data: $(".form-contact").serialize(),
     success: function (response) {
       if (response) {
+        $(".modal-body").html("Success!");
+        $(".modal-body").css("color", "var(--bs-success)");
+      } else {
+        $(".modal-body").html("Empty Form Not Allowed!");
+        $(".modal-body").css("color", "var(--btn-yes)");
       }
+      $("#check").modal("show");
+      $(".modal-title").html("Information Contact Me");
+      // footer btn
+      $(".btn.no").html("Close");
+      $(".btn.yes").addClass("d-none");
     },
   });
 });

@@ -13,7 +13,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- CSS custom-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />    
     <!-- CDN aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- CDN typed -->
@@ -53,7 +53,7 @@
               <a class="nav-link" href="#contact-me">Contact me</a>
             </li>
             <li class="nav-item log-out">
-              <a class="nav-link fw-bold"  data-bs-toggle="modal" href="#check" role="button">Log Out</a>
+              <a class="nav-link fw-bold"  data-bs-toggle="modal" role="button">Log Out</a>
             </li>
           </ul>
         </div>
@@ -70,17 +70,18 @@
             <button type="button" class="btn-exit" data-bs-dismiss="modal" aria-label="Close"> <i class="bi bi-x-lg"></i> </button>   
           </div>
           <div class="modal-body">
-            Do You Want to Log Out?
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn no" style="padding: 5px 30px;" data-bs-dismiss="modal">No</button>
             <button type="button" class="btn yes" style="padding: 5px 30px;">Yes</button>
           </div>
+                    
         </div>
       </div>
     </div>
-    <!-- end popup log-out checked -->
-
+    <!-- end popup log-out checked -->    
+    
     <!-- jumbotron start -->
     
     <section class="jumbotron text-center text-white" id="home">
@@ -209,16 +210,16 @@
           <div class="col-8">
             <form data-aos="zoom-in-up" class="form-contact">
               <div class="mb-3">
-                <label for="nama-lengkap" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="nama-lengkap" aria-describedby="nama-lengkap" />
+                <label for="full-name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="full-name" aria-describedby="full-name" name='full-name'/>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name='email' />
               </div>
               <div class="mb-3">
                 <label for="comments" class="form-label">Comments</label>
-                <textarea class="form-control" placeholder="Leave a comment here!" id="comments" style="height: 200px"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here!" id="comments" name='comments' style="height: 200px"></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Send</button>
             </form>
